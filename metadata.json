@@ -1,6 +1,6 @@
 {
   "name": "alanpetersen-p4ruby",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "alanpetersen",
   "summary": "Manages the Perforce Ruby API (p4ruby)",
   "license": "Apache-2.0",
@@ -8,7 +8,6 @@
   "project_page": "https://github.com/alanpetersen/puppet-p4ruby",
   "issues_url": "https://github.com/alanpetersen/puppet-p4ruby/issues",
   "dependencies": [
-    {"name":"alanpetersen-p4api","version_requirement":">= 0.1.0"}
   ],
   "requirements": [
     {
