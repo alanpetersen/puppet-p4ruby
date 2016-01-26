@@ -1,0 +1,6 @@
+fixtures:
+  repositories:
+    p4api:    "https://github.com/alanpetersen/puppet-p4api.git"
+    staging:  "https://github.com/nanliu/puppet-staging.git"
+  symlinks:
+    p4ruby: "#{source_dir}"
