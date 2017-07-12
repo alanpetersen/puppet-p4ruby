@@ -28,10 +28,9 @@ class p4ruby (
     ensure => present,
   }
 
-  package {'gcc':
-    ensure => present,
-    name   => $gcc_package,
-  }
+  ensure_resource("package", $gcc_package, {
+    ensure => "installed",
+  })
 
   if ($p4api_dir) {
     package {'p4ruby':
