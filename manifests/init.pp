@@ -19,14 +19,13 @@ class p4ruby (
   $ruby_dev_package = $p4ruby::params::ruby_dev_package,
 ) inherits p4ruby::params {
 
-  package {'ruby-dev':
+  ensure_resource('package', $ruby_dev_package, {
     ensure => present,
-    name   => $ruby_dev_package,
-  }
+  })
 
-  package {'rubygems':
+  ensure_resource('package', 'rubygems', {
     ensure => present,
-  }
+  })
 
   ensure_resource("package", $gcc_package, {
     ensure => "installed",
