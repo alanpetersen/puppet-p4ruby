@@ -36,13 +36,13 @@ class p4ruby (
       ensure          => present,
       provider        => 'gem',
       install_options => ['--', "--with-p4api-dir=${p4api_dir}"],
-      require         => Package['ruby-dev', 'rubygems', 'gcc'],
+      require         => Package[$ruby_dev_package, 'rubygems', $gcc_package],
     }
   } else {
     package {'p4ruby':
       ensure   => present,
       provider => 'gem',
-      require  => Package['ruby-dev', 'rubygems', 'gcc'],
+      require  => Package[$ruby_dev_package, 'rubygems', $gcc_package],
     }
   }
 }
